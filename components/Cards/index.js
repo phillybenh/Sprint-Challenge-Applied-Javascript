@@ -28,7 +28,7 @@ axios
         Object.keys(data).forEach(key => {
             // console.log(data[key]);
             data[key].forEach(topic => {
-                console.log(topic);
+                // console.log(topic);
                 cardContainer.append(cardCreator(topic));
             });
         });
