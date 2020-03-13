@@ -8,7 +8,7 @@
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
 
-const topicContainer = document.querySelector('.title');
+const topicContainer = document.querySelector('.topics');
 // console.log(topicContainer);
 
 axios
@@ -28,6 +28,6 @@ function topicFCN(data) {
     const tab = document.createElement('div');
     tab.classList.add('tab');
     tab.textContent = data;
-    // console.log(tab) looks weird on website, but is returning '<div class="tab">topic here</div>'
+    console.log(tab) 
     return tab;
-}
+};
