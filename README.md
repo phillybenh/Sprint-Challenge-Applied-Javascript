@@ -30,18 +30,28 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+    The DOM or Document Object Model  is a language neutral API that is an object representation of the html elements of a web page. It  can be conceptualized as a tree-like structure representing your content, structure, and style.
+
 2. What is an event?
+
+    Events are things that happen in the system you are programming which is passed down through the DOM. Examples of events include a user clicking on an element, the window being resized, and a keypress.
 
 3. What is an event listener?
 
+    An event listener is a method that can be attached to any DOM object. The listener takes two arguments: (1) the event that it is listening for and (2) the callback function that executes when that event occurs. 
+
 4. Why would we convert a NodeList into an Array?
+
+    While a NodeList is similar to an array, it needs to be converted to a true array if you want to use all of the array prototypes on it. 
 
 5. What is a component?
 
+    A component is a single modular piece of code that usually consists of HTML, CSS, and JS. Components are reusable, D.R.Y., and can stand alone.
+
 ### Git Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
+* [x] Fork the project into your GitHub user account
+* [x] Clone the forked project into a directory on your machine
 * [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
 * [ ] You are now ready to build this project with your preferred IDE
 
