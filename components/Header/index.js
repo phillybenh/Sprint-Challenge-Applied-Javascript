@@ -29,5 +29,5 @@ function Header() {
 };
 
 const headerContainer = document.querySelector('.header-container');
-console.log(headerContainer);
+// console.log(headerContainer);
 headerContainer.append(Header());

@@ -7,3 +7,27 @@
 //
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
+
+const topicContainer = document.querySelector('.title');
+// console.log(topicContainer);
+
+axios
+    .get('https://lambda-times-backend.herokuapp.com/topics')
+    .then(response => {
+        // console.log(response);
+        response.data.topics.forEach(item => {
+            // console.log(item);
+            topicContainer.append(topicFCN(item));
+        });
+    })
+    .catch(error => {
+        console.log("The data was not returned", error);
+    });
+
+function topicFCN(data) {
+    const tab = document.createElement('div');
+    tab.classList.add('tab');
+    tab.textContent = data;
+    // console.log(tab) looks weird on website, but is returning '<div class="tab">topic here</div>'
+    return tab;
+}
