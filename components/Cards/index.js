@@ -24,17 +24,13 @@ axios
     .get('https://lambda-times-backend.herokuapp.com/articles')
     .then(response => {
         // console.log(response.data.articles.bootstrap);
-        Object.entries(response.data.articles).forEach(entry => {
-            console.log(entry);
-            // entry.forEach(topic => {
-            //     console.log(topic);
-            //     // Object.values(topic).forEach(article => {
-            //     //     console.log(article.headline);
-            //     //     console.log(article.authorName);
-            //     // })
-            // });
-
-            cardContainer.append(cardCreator(entry));
+        let data = response.data.articles;
+        Object.keys(data).forEach(key => {
+            // console.log(data[key]);
+            data[key].forEach(topic => {
+                console.log(topic);
+                cardContainer.append(cardCreator(topic));
+            });
         });
     })
     .catch(error => {
@@ -49,10 +45,10 @@ function cardCreator(data) {
         image = document.createElement('img'),
         authorName = document.createElement('span');
 
-    headline.textContent = 'test';
-    image.src = '../Sprint-Challenge-Applied-Javascript/assets/bones.jpg';
-    image.alt = 'image of author';
-    authorName.textContent = 'test name';
+    headline.textContent = data.headline;
+    image.src = data.authorPhoto;
+    image.alt = 'image of author puppers';
+    authorName.textContent = data.authorName;
 
     newCard.classList.add('card');
     headline.classList.add('headline');

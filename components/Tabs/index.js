@@ -28,6 +28,6 @@ function topicFCN(data) {
     const tab = document.createElement('div');
     tab.classList.add('tab');
     tab.textContent = data;
-    console.log(tab) 
+    // console.log(tab) 
     return tab;
 };
